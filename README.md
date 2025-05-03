@@ -1,52 +1,82 @@
-Waste Management System is a full-stack web application built to streamline the reporting, tracking, and management of municipal solid waste. The platform enables residents to report waste-related issues and allows administrators to monitor and manage waste collection efficiently.
+# Waste Monitoring and Management System
 
-🚀 Features
-🧍 User Features:
-Create an account and log in securely
+This web application is designed to improve waste management by providing a platform for citizens to report waste and for municipal officers to manage waste disposal[cite: 62, 63, 64].
 
-Report waste incidents with location and photo
+## Overview
 
-Track status of submitted reports
+The system uses web technologies such as JSP, JDBC, MySQL, HTML, CSS, and JavaScript to enable efficient waste reporting and disposal[cite: 62]. It aims to create cleaner and healthier surroundings by facilitating real-time waste identification and organized cleanup processes[cite: 63, 64]. The platform offers login access for both municipal officers and users[cite: 65]. Users can upload photos and location details of waste, which are then relayed to the authorities for action[cite: 66, 67].
 
-Receive updates and notifications
+## Features
 
-🛠️ Admin Features:
-View and manage all waste reports
+* **User Reporting:** Citizens can log in, upload photos, and provide location details of waste[cite: 66].
+* **Real-time Tracking:** Municipal officers can identify and locate waste in real-time[cite: 64].
+* **Efficient Communication:** The system relays waste information to the relevant authorities for prompt action[cite: 67].
+* **User-friendly Interface:** The platform is designed to be accessible to users with limited technical knowledge[cite: 68].
+* **Improved Waste Management:** The system streamlines waste disposal efforts and promotes community participation in maintaining a clean environment[cite: 69].
 
-Assign collection tasks to field workers
+## Files Included
 
-Update status of requests (Pending, In Progress, Resolved)
+### Java Servlets and Classes
 
-View reports on a map (Google Maps API)
+* **AccountDetailsServlet.java:** Handles fetching and displaying user account details.
+* **AdminLogin.java:** Implements login functionality for administrative users.
+* **AdminMainServlet.java:** Serves as the main servlet for the admin interface, managing requests.
+* **GetImageServlet.java:** Retrieves and serves image data.
+* **LoginServlet.java:** Handles login functionality for regular users.
+* **RequestData.java:** Defines the structure for request-related data.
+* **SendRequestServlet.java:** Handles the submission of user requests, including image uploads.
+* **SignupRegister.java:** Implements user registration and signup.
+* **UpdatePassword.java:** Allows users to update their passwords.
+* **UpdateStatusServlet.java:** Updates the status of waste disposal requests.
 
-Dashboard with analytics and statistics
+### HTML Files
 
-🛠️ Tech Stack
-Backend:
-Java 17
+* **Index.html:** Main entry point for user login/registration.
+* **MCD.html:** (Potentially a placeholder or specific page within a user flow - needs context from usage).
+* **Yes.html:** (Potentially an intermediate page in a user flow - needs context from usage).
 
-Spring Boot
+### Configuration
 
-Spring Data JPA
+* **web.xml:** Deployment descriptor for the web application.
 
-Hibernate
+## Database
 
-MySQL
+The application uses a MySQL database to store user information, waste reports, and other data[cite: 62].
 
-Frontend:
-HTML5, CSS3, JavaScript
+## Technologies Used
 
-React.js / Angular (choose based on your stack)
+* JSP
+* JDBC
+* MySQL
+* HTML
+* CSS
+* JavaScript [cite: 62]
 
-Bootstrap / Tailwind CSS
+## Existing System Limitations
 
-Axios (for API calls)
+The existing waste management systems often rely on manual reporting, leading to:
 
-Other:
-JWT (JSON Web Token) for Authentication
+* Delays in response[cite: 70, 71].
+* Inefficient tracking of waste sites[cite: 71].
+* Minimal public participation[cite: 72].
+* Challenges in waste segregation[cite: 73].
+* Inefficiencies in waste removal due to fixed schedules[cite: 74].
 
-Maven / Gradle
+## Proposed System Advantages
 
-Google Maps API
+This system offers improvements over existing systems by:
 
-Swagger (for API documentation)
+* Enabling easy waste reporting through a web-based platform[cite: 75, 76].
+* Providing real-time tracking of waste[cite: 77].
+* Enhancing community engagement[cite: 78].
+* Improving waste segregation[cite: 79].
+* Optimizing waste collection routes and response times[cite: 80].
+
+## How to Run
+
+1.  **Database Setup:** Create a MySQL database named "WMS" and configure the connection details in the Java files.
+2.  **Build the Application:** Compile the Java files and package the application into a WAR file.
+3.  **Deploy:** Deploy the WAR file to a servlet container (e.g., Tomcat).
+4.  **Access:** Access the application through a web browser.
+
+**Note:** The HTML files `MCD.html` and `Yes.html` appear to be unrelated to the core waste management functionality and might be part of a different application or test.
