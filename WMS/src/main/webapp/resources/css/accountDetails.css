@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* Apply a cool gradient background to the page */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #006400, #228B22, #32CD32, #7CFC00);
+    color: #2e2e2e;
+}
+
+/* Main Content Container */
+.container {
+    max-width: 600px;
+    margin: 150px auto;
+    padding: 30px;
+    background: linear-gradient(to right, #00bcd4cc, #8e24aacc); /* matching gradient with transparency */
+    backdrop-filter: blur(10px); /* adds glass-like blur */
+    -webkit-backdrop-filter: blur(10px); /* for Safari support */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    color: #fff; /* makes text visible over the gradient */
+}
+
+
+/* Section Title */
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* User Details */
+.user-details p {
+    font-size: 18px;
+    margin: 12px 0;
+    line-height: 1.6;
+    color: white;
+}
+
+.user-details strong {
+    color: white;
+}
+
+/* Options (Edit / Change Password) */
+.options {
+    margin-top: 30px;
+}
+
+.button {
+	background: linear-gradient(135deg, #00bcd4, #3f51b5);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover {
+    
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #2ecc71, 0 0 20px #27ae60;
+    animation: shimmer 1.5s infinite linear;
+    background-size: 200% 200%;
+}
+

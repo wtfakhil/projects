@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3498db, #9b59b6); /* New gradient background (blue to purple) */
+   
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav Button List */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    margin-right: 50px;
+    padding: 12px 24px;
+}
+
+.nav-links .logout-btn {
+    margin-left: auto;
+    margin-right: 50px;  /* Adds space from the right edge */
+}
+
+/* Neon Logout Button */
+/* Nav Button Styling */
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ffcc70);
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 40px;
+    box-shadow: 0 0 12px #ff6b6b, 0 0 18px #ffcc70;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ripple Effect on Hover */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: 0;
+}
+
+
+.nav-links a:hover::before {
+    width: 250px;
+    height: 250px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    transform: scale(1.07);
+    box-shadow: 0 0 24px #ff6b6b, 0 0 34px #ffcc70;
+}
+
+
+/* Form Container */
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* Gradient Background */
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    transition: all 0.3s ease;
+    color: white;
+    overflow: hidden; /* Ensures the content doesn't overflow */
+    position: relative;
+}
+
+/* Form Heading */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Text shadow for emphasis */
+}
+
+/* Form Field Styling */
+select, input[type="text"], input[type="file"], input[type="email"], input[type="password"], input[type="date"], button {
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #333;
+}
+
+/* Focus Effect on Inputs */
+select:focus, input[type="text"]:focus, input[type="file"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus {
+    border-color: #2ecc71;
+    background-color: #eafaf2;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.3);
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 30px rgba(46, 204, 113, 0.6); /* Neon glow shadow */
+    animation: glowEffect 1.5s infinite alternate; /* Glowing animation */
+}
+
+/* Button Active Effect */
+button:active {
+    transform: translateY(2px); /* Button presses down */
+    box-shadow: 0 3px 8px rgba(46, 204, 113, 0.2);
+    animation: none;
+}
+
+/* File Upload Input */
+input[type="file"] {
+    border: 2px solid #27ae60;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Hover Effect on File Upload */
+input[type="file"]:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Placeholder Styling */
+input::placeholder, select::placeholder {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Input Hover Effect */
+input:hover, select:hover {
+    border-color: #27ae60;
+    background-color: #f4f9f4;
+}
+
+/* Input Active Effect */
+input:active, select:active {
+    background-color: #e2f3e2;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+}
+
+/* Smooth transition for form fields */
+select, input {
+    transition: all 0.3s ease;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color:white;
+    text-align: left;
+}
+
+/* Adding space between input fields */
+input, select {
+    margin-bottom: 15px;
+}
+
+/* Updated Button Styles for Creativity */
+
+/* General button styling */
+button {
+background: linear-gradient(135deg, #00bcd4, #3f51b5);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px; /* Rounded edges for a modern look */
+    cursor: pointer;
+    margin-top: 15px;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+/* Shimmer Sweep Effect on Hover */
+button:hover {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #2ecc71, 0 0 20px #27ae60;
+    animation: shimmer 1.5s infinite linear;
+    background-size: 200% 200%;
+}
+
+/* Shimmer Animation Keyframes */
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Active state for Button (Pressed) */
+button:active {
+    transform: translateY(2px); /* Button presses down */
+    box-shadow: 0 3px 8px rgba(46, 204, 113, 0.2);
+    animation: none; /* Stop glow on active */
+}
+
+/* Button Disabled State */
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    animation: none;
+}
+
+/* Button Focus State */
+button:focus {
+    outline: none;
+    border: 2px solid #27ae60; /* Green border when focused */
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+}
+
+/* Highlight Send Request in Navbar */
+#send-request {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#send-request:hover {
+    background-color: #219150;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Manual Location Fields (Hidden by Default) */
+.manual-location {
+    display: none;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        padding: 12px;
+        width: 100%;
+    }
+
+    #send-request {
+        width: 100%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #006400, #228B22, #32CD32, #7CFC00);
+   
+ color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Main Content */
+.container {
+    padding: 40px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out; /* Fade-in animation for the container */
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .container th, .container td {
+        font-size: 14px;
+    }
+}
+/* Table Styling */
+.request-table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Gradient background from purple to blue */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out; /* Fade-in effect on page load */
+    transform-style: preserve-3d; /* Enable 3D transforms */
+    z-index: 1;
+}
+
+/* 3D Hover Effect */
+.request-table:hover {
+    transform: rotateY(10deg) scale(1.05); /* Slight 3D tilt and scale */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    animation: glowEffect 1.5s infinite alternate; /* Glowing effect */
+}
+
+/* Glowing Effect Animation */
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0px 0px 15px #8e44ad, 0px 0px 25px #3498db;
+    }
+    100% {
+        box-shadow: 0px 0px 25px #8e44ad, 0px 0px 40px #3498db;
+    }
+}
+
+/* Table Header Styling */
+.request-table th {
+    background-color: #9b59b6; /* Purple color for header */
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #8e44ad; /* Darker purple border */
+    transform: rotateX(10deg); /* Slight 3D effect on header */
+    text-shadow: 0px 0px 8px #3498db; /* Glowing effect on header text */
+}
+
+/* Table Data Styling */
+.request-table td {
+    padding: 16px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #2c3e50; /* Dark background for data cells */
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    transform: rotateX(10deg); /* Slight 3D effect on data cells */
+    box-shadow: inset 0px 0px 8px #8e44ad; /* Glowing effect inside cells */
+}
+
+/* Row Hover Effect */
+.request-table tr:hover {
+    background-color: #34495e; /* Darker background for hovered row */
+    transform: translateY(-4px); /* Slight upward movement on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    animation: rowHoverGlow 0.4s ease-out; /* Glowing effect on row hover */
+}
+
+/* Alternate Row Color */
+.request-table tr:nth-child(even) {
+    background-color: #34495e; /* Slightly darker gray */
+}
+
+/* Row Hover Glowing Animation */
+@keyframes rowHoverGlow {
+    0% {
+        background-color: #34495e;
+        box-shadow: 0px 0px 10px #8e44ad, 0px 0px 20px #3498db;
+    }
+    100% {
+        background-color: #3d566e;
+        box-shadow: 0px 0px 20px #8e44ad, 0px 0px 30px #3498db;
+    }
+}
+
+/* Link Styling */
+.request-table td a {
+    color: #1abc9c; /* Teal color for the link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.2s ease;
+}
+
+/* Link Hover Effect */
+.request-table td a:hover {
+    color: #e74c3c; /* Red color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .request-table {
+        width: 95%;
+    }
+
+    .request-table th, .request-table td {
+        font-size: 14px;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3D Hover Animation for Rows */
+@keyframes rowHover {
+    0% {
+        transform: translateY(0) rotateX(0);
+    }
+    100% {
+        transform: translateY(-5px) rotateX(5deg); /* Slight tilt and upward movement */
+    }
+}
+
+.request-table tr:hover {
+    animation: rowHover 0.3s ease-out; /* Apply 3D animation on row hover */
+}
